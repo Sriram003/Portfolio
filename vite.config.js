@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  server: {
-    port: 3000, // Change the port to 3000
+  base: '/Portfolio/',  // Make sure this matches your repo name
+  build: {
+    outDir: 'dist',  // Ensure the build output directory is 'dist'
   },
-  base: '/Portfolio/', // Set the base path for GitHub Pages
 });

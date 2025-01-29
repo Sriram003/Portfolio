@@ -3,7 +3,11 @@ import './style.css'
 // import * as THREE from './node_modules/three/build/three.module.js';
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.module.js';
 
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+// import { OrbitControls } from '/three/examples/jsm/controls/OrbitControls';
+import { OrbitControls } from "./node_modules/three/examples/jsm/controls/OrbitControls.js";
+// import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.150.1/examples/jsm/controls/OrbitControls.js";
+
+
 
 const scene = new THREE.Scene();
 
@@ -55,11 +59,11 @@ function addStar() {
 
 Array(200).fill().forEach(addStar)
 
-const spaceTexture = new THREE.TextureLoader().load('assets/images/spaceimage.jpg');
+const spaceTexture = new THREE.TextureLoader().load('spaceimage.jpg');
 scene.background = spaceTexture;
 
 // Avatar
-const sriTexture = new THREE.TextureLoader().load('assets/images/sri.png');
+const sriTexture = new THREE.TextureLoader().load('sri.png');
 
 const sri = new THREE.Mesh(
     new THREE.BoxGeometry(3,3,3),
@@ -69,8 +73,8 @@ const sri = new THREE.Mesh(
 scene.add(sri);
 
 // Moon
-const moonTexture = new THREE.TextureLoader().load('assets/images/moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('assets/images/normal.jpg');
+const moonTexture = new THREE.TextureLoader().load('moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('normal.jpg');
 
 const moon = new THREE.Mesh(
     new THREE.SphereGeometry(3,32,32),
